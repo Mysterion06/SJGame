@@ -26,7 +26,7 @@ isLoading
 
 gameTime {
     if (current.gameTimer < old.gameTimer) {
-        vars.totalTime += old.gameTimer - current.gameTimer;
+        vars.totalTime += old.gameTimer - current.gameTimer + old.milliTimer - current.milliTimer;
     }
     if (current.gameTimer >= 0 && old.gameTimer == 0) {
         vars.totalTime = vars.totalTime - current.gameTimer;
